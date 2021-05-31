@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator PWA</title>
+    <meta name="Description" content="Scientific Calculator with Grid and Flex. Each button is an object, and operation and formula are arrays joined in an object data">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/calculator.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" href="icon/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div class="calc-container">
+        <div class="calculator">
+            <!-- calculator screen -->
+            <div class="output">
+                <div class="operation">
+                    <p class="value"></p>
+                </div>
+                <div class="result">
+                    <p class="value">0</p>
+                </div>
+            </div>
+            <!-- normal view for calculator buttons -->
+            <div class="input" id="input-portrait">
+                <button id="rad" class="active">Rad</button>
+                <button id="deg">Deg</button>
+                <button id="clear">C</button>
+                <button id="delete">DEL</button>
+                <button id="square-root">√</button>
+                <button id="power">x<span>y</span></button>
+                <button id="open-parenthesis">(</button>
+                <button id="close-parenthesis">)</button>
+                <button id="pi">π</button>
+                <button id="cos">cos</button>
+                <button id="sin">sin</button>
+                <button id="tan">tan</button>
+                <button id="ANS">ANS</button>
+                <button id="acos">acos</button>
+                <button id="asin">asin</button>
+                <button id="atan">atan</button>
+                <button id="seven">7</button>
+                <button id="eight">8</button>
+                <button id="nine">9</button>
+                <button id="division">÷</button>
+                <button id="four">4</button>
+                <button id="five">5</button>
+                <button id="six">6</button>
+                <button id="multiplication">×</button>
+                <button id="one">1</button>
+                <button id="two">2</button>
+                <button id="three">3</button>
+                <button id="subtraction">–</button>
+                <button id="point">.</button>
+                <button id="zero">0</button>
+                <button id="calculate">=</button>
+                <button id="addition">+</button>
+            </div>
+            <!-- reorganizing buttons for when mobile view is rotated to landscape -->
+            <div class="input" id="input-landscape">
+                <!-- left side : row 1 -->
+                <button id="rad" class="active">Rad</button>
+                <button id="deg">Deg</button>
+                <button id="clear">C</button>
+                <button id="delete">DEL</button>
+                <!-- right side : row 1 -->
+                <button id="seven">7</button>
+                <button id="eight">8</button>
+                <button id="nine">9</button>
+                <button id="division">÷</button>
+                <!-- left side : row 2 -->
+                <button id="square-root">√</button>
+                <button id="power">x<span>y</span></button>
+                <button id="open-parenthesis">(</button>
+                <button id="close-parenthesis">)</button>
+                <!-- right side : row 2 -->
+                <button id="four">4</button>
+                <button id="five">5</button>
+                <button id="six">6</button>
+                <button id="multiplication">×</button>
+                <!-- left side : row 3 -->
+                <button id="pi">π</button>
+                <button id="cos">cos</button>
+                <button id="sin">sin</button>
+                <button id="tan">tan</button>
+                <!-- right side : row 3 -->
+                <button id="one">1</button>
+                <button id="two">2</button>
+                <button id="three">3</button>
+                <button id="subtraction">–</button>
+                <!-- left side : row 4 -->
+                <button id="ANS">ANS</button>
+                <button id="acos">acos</button>
+                <button id="asin">asin</button>
+                <button id="atan">atan</button>
+                <!-- right side : row 4 -->
+                <button id="point">.</button>
+                <button id="zero">0</button>
+                <button id="calculate">=</button>
+                <button id="addition">+</button>
+            </div>
+        </div>    
+    </div>
+    <!-- install PWA button -->
+    <div id="install_container" class="initial">
+        <button id="install_button">Install</button>
+    </div>
+</body>
+
+</html>

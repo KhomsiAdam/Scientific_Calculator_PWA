@@ -1,0 +1,246 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+// Colors
+$bg-gray: #636363;
+$dark-blue: #214d6e;
+$black: #0c0c0c;
+$dark-gray: #3b3b3b;
+$white: #ffffff;
+$light-green: #a2cfbe;
+$gray: #777777;
+$hover-gray: #414141;
+$yellow: #b0b930;
+$green: #18b893;
+$hover-green: #199276;
+$red: #be3d34;
+$hover-red: #a1342c;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+body {
+    background-color: $bg-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+}
+
+#input-landscape {
+    display: none;
+}
+
+.calc-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark-blue;
+    border-radius: 10px;
+    height: 90vh;
+    width: 350px;
+}
+
+#install_container {
+    //display: none;
+    text-align: center;
+    #install_button {
+        font-size: 18px;
+        font-weight: bold;
+        width: 350px;
+        border: $white 1px solid;
+        padding: 10px;
+        border-radius: 10px;
+        color: $white;
+        background-color: $green;
+        cursor: pointer;
+    }
+    #install_button:hover {
+        background-color: $hover-green;
+    }
+}
+
+  #install_container.initial {
+    display: initial;
+  }
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.output {
+    display: grid;
+    border-radius: 10px;
+    height: 160px;
+    width: 310px;
+    background-color: $light-green;
+}
+
+.operation {
+    color: $dark-gray;
+    font-weight: bold;
+    overflow-y: auto;
+    //overflow-wrap: break-word;
+    display: flex;
+    flex-direction: row-reverse;
+    word-break: break-all;
+    font-size: 22px;
+    height: 80px;
+    padding: 1em 1.6em 1em 1em;
+    .value {
+        text-align: right;
+    }
+}
+
+.result {
+    color: $black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row-reverse;
+    word-break: break-all;
+    //overflow-wrap: break-word;
+    font-size: 28px;
+    height: 80px;
+    padding: 0.8em;
+    .value {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 11ch;
+    }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.operation::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.operation {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.input {
+    display: grid;
+    grid-gap: 10px;
+    grid-area: bottom;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(8, 50px);
+    button {
+        cursor: pointer;
+        color: $white;
+        border: 1px solid $white;
+        outline: none;
+        background-color: $gray;
+        font-size: 18px;
+        span {
+            font-size: 0.6em;
+            position: absolute;
+        }
+    }
+    button:hover {
+        background-color: $hover-gray;
+    }
+    #rad {
+        border-radius: 10px 0 0 0;
+    }
+    #clear {
+        color: $white;
+        background-color: $red;
+    }
+    #clear:hover {
+        background-color: $hover-red;
+    }
+    #delete {
+        color: $white;
+        border-radius: 0 10px 0 0;
+        background-color: $red;
+    }
+    #delete:hover {
+        background-color: $hover-red;
+    }
+    #calculate {
+        color: $white;
+        font-size: 24px;
+        background-color: $green;
+    }
+    #calculate:hover {
+        background-color: $hover-green;
+    }
+    #point {
+        border-radius: 0 0 0 10px;
+    }
+    #addition {
+        border-radius: 0 0 10px 0;
+    }
+}
+
+#division,
+#multiplication,
+#subtraction,
+#addition {
+    color: $green;
+    font-size: 26px;
+}
+.active {
+    background-color: $yellow !important;
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    #input-landscape {
+        display: grid;
+    }
+    #input-portrait {
+        display: none;
+    }
+    .calc-container {
+        width: 660px;
+    }
+    #install_container {
+        #install_button {
+            width: 350px
+        }
+    }
+    .output {
+        height: 80px;
+        width: 630px;
+        .operation,
+        .result {
+            height: 40px;
+            padding: 0.1em 0.5em;
+        }
+        .result {
+            .value {
+                max-width: 30ch;
+            }
+        }
+    }
+    .input {
+        grid-template-columns: repeat(8, 70px);
+        grid-template-rows: repeat(4, 40px);
+        #ANS {
+            border-radius: 0 0 0 10px;
+        }
+        #atan {
+            border-radius: 0 0 10px 0;
+        }
+        #seven {
+            border-radius: 10px 0 0 0;
+        }
+        #division {
+            border-radius: 0 10px 0 0;
+        }
+    }
+}

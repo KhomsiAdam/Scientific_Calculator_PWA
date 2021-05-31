@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  background-color: #636363;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  gap: 10px;
+}
+
+#input-landscape {
+  display: none;
+}
+
+.calc-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #214d6e;
+  border-radius: 10px;
+  height: 90vh;
+  width: 350px;
+}
+
+#install_container {
+  text-align: center;
+}
+
+#install_container #install_button {
+  font-size: 18px;
+  font-weight: bold;
+  width: 350px;
+  border: #ffffff 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #18b893;
+  cursor: pointer;
+}
+
+#install_container #install_button:hover {
+  background-color: #199276;
+}
+
+#install_container.initial {
+  display: initial;
+}
+
+.calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.output {
+  display: -ms-grid;
+  display: grid;
+  border-radius: 10px;
+  height: 160px;
+  width: 310px;
+  background-color: #a2cfbe;
+}
+
+.operation {
+  color: #3b3b3b;
+  font-weight: bold;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  word-break: break-all;
+  font-size: 22px;
+  height: 80px;
+  padding: 1em 1.6em 1em 1em;
+}
+
+.operation .value {
+  text-align: right;
+}
+
+.result {
+  color: #0c0c0c;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  word-break: break-all;
+  font-size: 28px;
+  height: 80px;
+  padding: 0.8em;
+}
+
+.result .value {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 11ch;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.operation::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.operation {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.input {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  grid-area: bottom;
+  -ms-grid-columns: (70px)[4];
+      grid-template-columns: repeat(4, 70px);
+  -ms-grid-rows: (50px)[8];
+      grid-template-rows: repeat(8, 50px);
+}
+
+.input button {
+  cursor: pointer;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  outline: none;
+  background-color: #777777;
+  font-size: 18px;
+}
+
+.input button span {
+  font-size: 0.6em;
+  position: absolute;
+}
+
+.input button:hover {
+  background-color: #414141;
+}
+
+.input #rad {
+  border-radius: 10px 0 0 0;
+}
+
+.input #clear {
+  color: #ffffff;
+  background-color: #be3d34;
+}
+
+.input #clear:hover {
+  background-color: #a1342c;
+}
+
+.input #delete {
+  color: #ffffff;
+  border-radius: 0 10px 0 0;
+  background-color: #be3d34;
+}
+
+.input #delete:hover {
+  background-color: #a1342c;
+}
+
+.input #calculate {
+  color: #ffffff;
+  font-size: 24px;
+  background-color: #18b893;
+}
+
+.input #calculate:hover {
+  background-color: #199276;
+}
+
+.input #point {
+  border-radius: 0 0 0 10px;
+}
+
+.input #addition {
+  border-radius: 0 0 10px 0;
+}
+
+#division,
+#multiplication,
+#subtraction,
+#addition {
+  color: #18b893;
+  font-size: 26px;
+}
+
+.active {
+  background-color: #b0b930 !important;
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  #input-landscape {
+    display: -ms-grid;
+    display: grid;
+  }
+  #input-portrait {
+    display: none;
+  }
+  .calc-container {
+    width: 660px;
+  }
+  #install_container #install_button {
+    width: 350px;
+  }
+  .output {
+    height: 80px;
+    width: 630px;
+  }
+  .output .operation,
+  .output .result {
+    height: 40px;
+    padding: 0.1em 0.5em;
+  }
+  .output .result .value {
+    max-width: 30ch;
+  }
+  .input {
+    -ms-grid-columns: (70px)[8];
+        grid-template-columns: repeat(8, 70px);
+    -ms-grid-rows: (40px)[4];
+        grid-template-rows: repeat(4, 40px);
+  }
+  .input #ANS {
+    border-radius: 0 0 0 10px;
+  }
+  .input #atan {
+    border-radius: 0 0 10px 0;
+  }
+  .input #seven {
+    border-radius: 10px 0 0 0;
+  }
+  .input #division {
+    border-radius: 0 10px 0 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
