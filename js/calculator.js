@@ -36,13 +36,25 @@ let ans = 0;
 // CALCULATOR BUTTONS
 let calculator_buttons = [
     {
-        name : "rad",
+        name : "prad",
         symbol : "Rad",
         formula : false,
         type : "key"
     },
     {
-        name : "deg",
+        name : "pdeg",
+        symbol : "Deg",
+        formula : false,
+        type : "key"
+    },
+    {
+        name : "lrad",
+        symbol : "Rad",
+        formula : false,
+        type : "key"
+    },
+    {
+        name : "ldeg",
         symbol : "Deg",
         formula : false,
         type : "key"
@@ -231,14 +243,19 @@ let calculator_buttons = [
 
 let RADIAN = true;
 
-const rad_btn = document.getElementById('rad');
-const deg_btn = document.getElementById('deg');
+const p_rad_btn = document.getElementById('prad');
+const p_deg_btn = document.getElementById('pdeg');
+const l_rad_btn = document.getElementById('lrad');
+const l_deg_btn = document.getElementById('ldeg');
 
-rad_btn.classList.add("active");
+p_rad_btn.classList.add("active");
+l_rad_btn.classList.add("active");
 
 function angleToggler(){
-    rad_btn.classList.toggle("active");
-    deg_btn.classList.toggle("active");
+    p_rad_btn.classList.toggle("active");
+    p_deg_btn.classList.toggle("active");
+    l_rad_btn.classList.toggle("active");
+    l_deg_btn.classList.toggle("active");
 }
 
 // click event listener
@@ -296,11 +313,11 @@ function calculator(button) {
             data.operation.pop();
             data.formula.pop();
             
-        } else if (button.name == "rad") {
+        } else if (button.name == "prad" || button.name == "lrad") {
             RADIAN = true;
             angleToggler();
             
-        } else if (button.name == "deg") {
+        } else if (button.name == "pdeg" || button.name == "ldeg") {
             RADIAN = false;
             angleToggler();
             

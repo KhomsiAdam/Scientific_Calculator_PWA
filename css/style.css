@@ -186,7 +186,7 @@ body {
   background-color: #414141;
 }
 
-.input #rad {
+.input #prad, .input #lrad {
   border-radius: 10px 0 0 0;
 }
 
@@ -251,7 +251,7 @@ body {
     width: 660px;
   }
   #install_container #install_button {
-    width: 350px;
+    width: 660px;
   }
   .output {
     height: 80px;
